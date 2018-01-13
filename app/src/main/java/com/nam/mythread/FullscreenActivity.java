@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.nam.mythread.wtf.NoThreadingExample;
 import com.nam.mythread.wtf.SimpleThreadingExample;
+import com.nam.mythread.wtf.SimpleThreadingExampleFix;
 import com.nam.mythread.wtf.SimpleThreadingViewPostActivity;
 
 /**
@@ -27,6 +28,7 @@ public class FullscreenActivity extends AppCompatActivity {
     private Button mButton;
     private Button mButton1;
     private Button mButton2;
+    private Button mButton3;
 
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -169,6 +171,19 @@ public class FullscreenActivity extends AppCompatActivity {
                 }
             });
         }
+
+        mButton3 = findViewById(R.id.button4);
+        mButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Click3");
+                Intent intent = new Intent(FullscreenActivity.this, SimpleThreadingExampleFix.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("FU4", "Fuck You4!!");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
 
 

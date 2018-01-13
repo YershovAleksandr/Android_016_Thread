@@ -23,6 +23,7 @@
         <activity android:name=".wtf.SimpleThreadingExample" />
         <activity android:name=".wtf.NoThreadingExample" />
         <activity android:name=".wtf.SimpleThreadingViewPostActivity" />
+        <activity android:name=".wtf.SimpleThreadingExampleFix" />
 
     </application>
 
