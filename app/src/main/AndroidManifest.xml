@@ -21,6 +21,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".wtf.SimpleThreadingExample" />
+        <activity android:name=".wtf.NoThreadingExample" />
+        <activity android:name=".wtf.SimpleThreadingViewPostActivity" />
+        <activity android:name=".wtf.SimpleThreadingExampleFix" />
+        <activity android:name=".wtf.AsyncTaskActivity" />
+        <activity android:name=".wtf.HandlerRunnableActivity" />
+        <activity android:name=".wtf.HandlerMessagesActivity" />
 
     </application>
 

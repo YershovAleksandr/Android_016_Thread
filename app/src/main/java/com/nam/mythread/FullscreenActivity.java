@@ -11,7 +11,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import com.nam.mythread.wtf.AsyncTaskActivity;
+import com.nam.mythread.wtf.HandlerMessagesActivity;
+import com.nam.mythread.wtf.HandlerRunnableActivity;
+import com.nam.mythread.wtf.NoThreadingExample;
 import com.nam.mythread.wtf.SimpleThreadingExample;
+import com.nam.mythread.wtf.SimpleThreadingExampleFix;
+import com.nam.mythread.wtf.SimpleThreadingViewPostActivity;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -23,6 +29,12 @@ public class FullscreenActivity extends AppCompatActivity {
     public static String LOGTAG = "X42";
 
     private Button mButton;
+    private Button mButton1;
+    private Button mButton2;
+    private Button mButton3;
+    private Button mButton4;
+    private Button mButton5;
+    private Button mButton6;
 
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -127,12 +139,89 @@ public class FullscreenActivity extends AppCompatActivity {
                     Log.i(LOGTAG, "Click");
                     Intent intent = new Intent(FullscreenActivity.this, SimpleThreadingExample.class);
                     Bundle bundle = new Bundle();
-                    //bundle.putString("FU", "Fuck you!!");
-                    intent.putExtra("FU", "Fuck you!!");
-                    startActivity(intent, bundle);
+                    bundle.putString("FU", "Fuck you!!");
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }
             });
         }
+
+        mButton1 = findViewById(R.id.button2);
+        if (mButton1 != null)
+        {
+            mButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i(LOGTAG, "Click1");
+                    Intent intent = new Intent(FullscreenActivity.this, NoThreadingExample.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("FU2", "Fuck you2!!");
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        mButton2 = findViewById(R.id.button3);
+        if (mButton2 != null)
+        {
+            mButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i(LOGTAG, "Click2");
+                    Intent intent = new Intent(FullscreenActivity.this, SimpleThreadingViewPostActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("FU3", "Fuck you3!!");
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+            });
+        }
+
+        mButton3 = findViewById(R.id.button4);
+        mButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Click3");
+                Intent intent = new Intent(FullscreenActivity.this, SimpleThreadingExampleFix.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("FU4", "Fuck You4!!");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        mButton4 = findViewById(R.id.button5);
+        mButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Click4");
+                Intent intent = new Intent(FullscreenActivity.this, AsyncTaskActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButton5 = findViewById(R.id.button6);
+        mButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Click5");
+                Intent intent = new Intent(FullscreenActivity.this, HandlerRunnableActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButton6 = findViewById(R.id.button7);
+        mButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Click6");
+                Intent intent = new Intent(FullscreenActivity.this, HandlerMessagesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 

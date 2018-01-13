@@ -6,11 +6,11 @@
 
 package com.nam.mythread.wtf;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,7 +21,7 @@ import android.widget.Toast;
 import com.nam.mythread.FullscreenActivity;
 import com.nam.mythread.R;
 
-public class SimpleThreadingExample extends Activity {
+public class SimpleThreadingExample extends AppCompatActivity {
 
 	private static final String TAG = "SimpleThreadingExample";
 
@@ -55,10 +55,6 @@ public class SimpleThreadingExample extends Activity {
 
 		Intent intent = getIntent();
 
-		String string2 = intent.getStringExtra("FU");
-		Log.i(FullscreenActivity.LOGTAG, "Wtf = " + string2);
-
-		//return;
 		if (intent != null)
 		{
 			Bundle bundle = intent.getExtras();
