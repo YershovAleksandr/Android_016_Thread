@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.nam.mythread.wtf.NoThreadingExample;
 import com.nam.mythread.wtf.SimpleThreadingExample;
+import com.nam.mythread.wtf.SimpleThreadingViewPostActivity;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -25,6 +26,7 @@ public class FullscreenActivity extends AppCompatActivity {
 
     private Button mButton;
     private Button mButton1;
+    private Button mButton2;
 
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -151,6 +153,23 @@ public class FullscreenActivity extends AppCompatActivity {
                 }
             });
         }
+
+        mButton2 = findViewById(R.id.button3);
+        if (mButton2 != null)
+        {
+            mButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i(LOGTAG, "Click2");
+                    Intent intent = new Intent(FullscreenActivity.this, SimpleThreadingViewPostActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("FU3", "Fuck you3!!");
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+            });
+        }
+
 
 
     }

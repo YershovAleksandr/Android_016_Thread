@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".wtf.SimpleThreadingExample" />
         <activity android:name=".wtf.NoThreadingExample" />
+        <activity android:name=".wtf.SimpleThreadingViewPostActivity" />
 
     </application>
 
