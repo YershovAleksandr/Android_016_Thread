@@ -76,13 +76,28 @@
                 android:text="Simple Threading Fix"
                 android:textAllCaps="false" />
 
-
             <Button
                 android:id="@+id/button5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:text="Async Task"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:text="Button" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Button" />
+
 
         </LinearLayout>
     </FrameLayout>

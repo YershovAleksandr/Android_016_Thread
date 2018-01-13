@@ -24,6 +24,7 @@
         <activity android:name=".wtf.NoThreadingExample" />
         <activity android:name=".wtf.SimpleThreadingViewPostActivity" />
         <activity android:name=".wtf.SimpleThreadingExampleFix" />
+        <activity android:name=".wtf.AsyncTaskActivity" />
 
     </application>
 
