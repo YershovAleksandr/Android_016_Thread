@@ -7,6 +7,7 @@
 package com.nam.mythread.wtf;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.nam.mythread.FullscreenActivity;
 import com.nam.mythread.R;
 
 public class SimpleThreadingExample extends Activity {
@@ -49,6 +51,39 @@ public class SimpleThreadingExample extends Activity {
 						Toast.LENGTH_SHORT).show();
 			}
 		});
+
+
+		Intent intent = getIntent();
+
+		String string2 = intent.getStringExtra("FU");
+		Log.i(FullscreenActivity.LOGTAG, "Wtf = " + string2);
+
+		//return;
+		if (intent != null)
+		{
+			Bundle bundle = intent.getExtras();
+			if (bundle != null)
+			{
+				String string = bundle.getString("FU");
+
+			 	if (string != null)
+			 	{
+			 		Log.i(FullscreenActivity.LOGTAG, "Wtf = " + string);
+				}
+				else
+				{
+					Log.i(FullscreenActivity.LOGTAG, "String = null!!!! ");
+				}
+			}
+			else
+			{
+				Log.i(FullscreenActivity.LOGTAG, "Bundle = null!!!! ");
+			}
+		}
+		else
+		{
+			Log.i(FullscreenActivity.LOGTAG, "Intent = null!!!! ");
+		}
 	}
 
 	private void loadIcon() {
