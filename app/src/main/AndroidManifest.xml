@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".wtf.SimpleThreadingExample" />
+        <activity android:name=".wtf.NoThreadingExample" />
 
     </application>
 
