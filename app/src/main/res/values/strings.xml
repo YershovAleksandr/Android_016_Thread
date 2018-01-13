@@ -3,4 +3,8 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="load_icon_string">Load Icon</string>
+    <string name="other_button_string">Other Button</string>
+    <string name="image_desc_string">Image</string>
+
 </resources>
