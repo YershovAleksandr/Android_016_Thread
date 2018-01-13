@@ -64,7 +64,7 @@ public class SimpleThreadingExample extends Activity {
 						R.drawable.painter);
 
 				// This doesn't work in Android
-				mIView.setImageBitmap(mBitmap);
+				//mIView.setImageBitmap(mBitmap);
 			}
 		}).start();
 	}
