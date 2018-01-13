@@ -126,7 +126,10 @@ public class FullscreenActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Log.i(LOGTAG, "Click");
                     Intent intent = new Intent(FullscreenActivity.this, SimpleThreadingExample.class);
-                    startActivity(intent);
+                    Bundle bundle = new Bundle();
+                    //bundle.putString("FU", "Fuck you!!");
+                    intent.putExtra("FU", "Fuck you!!");
+                    startActivity(intent, bundle);
                 }
             });
         }
