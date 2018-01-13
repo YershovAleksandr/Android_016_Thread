@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.nam.mythread.wtf.AsyncTaskActivity;
+import com.nam.mythread.wtf.HandlerMessagesActivity;
 import com.nam.mythread.wtf.HandlerRunnableActivity;
 import com.nam.mythread.wtf.NoThreadingExample;
 import com.nam.mythread.wtf.SimpleThreadingExample;
@@ -33,6 +34,7 @@ public class FullscreenActivity extends AppCompatActivity {
     private Button mButton3;
     private Button mButton4;
     private Button mButton5;
+    private Button mButton6;
 
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -205,6 +207,16 @@ public class FullscreenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(LOGTAG, "Click5");
                 Intent intent = new Intent(FullscreenActivity.this, HandlerRunnableActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mButton6 = findViewById(R.id.button7);
+        mButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(LOGTAG, "Click6");
+                Intent intent = new Intent(FullscreenActivity.this, HandlerMessagesActivity.class);
                 startActivity(intent);
             }
         });
